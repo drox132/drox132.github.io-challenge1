@@ -22,11 +22,22 @@
 .imagen-copiar{
     text-align: center;
     height: 65rem;
-    min-width: clamp(valor minimo, valor ideal, valor maximo);
     border-radius: 15px;
+    vertical-align: baseline;
   
   
 }
+
+
+#valor-encriptado{
+    top: 10%;
+    right: 10%;
+    width: 80%;
+    font-size: 25px;
+    background-color: #cccccc;
+    color: gray;
+} 
+
 #imagen{
     width: 100%;
     height: 80%;
@@ -76,11 +87,21 @@ transition: 1s all;
 #btn-desencriptar:hover, #btn-encriptar:hover {
     transform: scale(1.1);
 }
+
+
+
+.imagen-copiar img + p {
+   font-weight: bold;
+   font-size: 1.7em;
+}
+
+
+
 #btn-copiar{
 
     bottom: 5%;
     right: 25%;
-    width: 50%;
+    width: 90%;
     height: 50px;
     border-radius: 15px;
     background-color: #ffffff;
@@ -88,15 +109,54 @@ transition: 1s all;
     border-color: #0a3871;
     font-size: 20px;
     transition: 1s all;
+    display: none;
 }
 #btn-copiar:hover {
     transform: scale(1.1);
 }
-#valor-encriptado{
-    top: 10%;
-    right: 10%;
-    width: 80%;
-    font-size: 25px;
-    background-color: #cccccc;
-    color: gray;
+
+
+
+
+
+ /*tablet   */
+ @media(min-device-width:577px){
+    #btn-encriptar, #btn-desencriptar{
+    width: 45%;
+   
+}
+
+ }
+
+
+
+
+
+ /*portátiles    */
+@media (min-device-width: 993px){
+
+    header{
+        position: absolute;
+    }
+
+    main{
+      height: 600px;
+    }
+.input-boton{
+    display: inline-block;
+    width: 60%;
+    height:100%;
+    height: 1200px;
+}
+
+.imagen-copiar{
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    height: 1200px;
+}
+
+.imagen{
+    vertical-align: text-top;
+}
 }

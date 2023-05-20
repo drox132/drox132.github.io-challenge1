@@ -63,6 +63,7 @@ const btnEncriptar = document.getElementById("btn-encriptar");
 
         btnEncriptar.addEventListener("click", (evento)=>{
             encriptarPalabra();
+
         })
 
 
@@ -106,8 +107,9 @@ const btnEncriptar = document.getElementById("btn-encriptar");
             arrayTxtPalabra.forEach(element => {
                 palabraEncriptada = palabraEncriptada+element;
             });
+         
             imagen.style.display ="none";
-            copiar.removeAttribute("hidden");
+            copiar.style.display ="inline";
             spanInput.innerText = palabraEncriptada;
            
             limpiarInput();
