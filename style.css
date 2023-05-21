@@ -4,7 +4,7 @@
     
 }
 body{
-    position: relative;
+   /* position: relative;*/
 }
 .logo-alura{
     font-size: 90px;
@@ -16,7 +16,7 @@ body{
     box-sizing: border-box;
     width: 940px;
     background-color: aliceblue;
-    display: flex;
+   
 
 }
 body div{
@@ -111,4 +111,10 @@ transition: 1s all;
     font-size: 25px;
     background-color: #cccccc;
     color: gray;
+}
+/* 
+confiuracion de la pagina para ser responsiva
+*/
+@media screen {
+    
 }
