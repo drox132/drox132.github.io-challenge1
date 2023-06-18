@@ -23,10 +23,12 @@ body{
 }
 .imagen-copiar{
     text-align: center;
-    height: 65rem;
+    height: 45rem;
     border-radius: 15px;
-    vertical-align: baseline;
-  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;  
   
 }
 
@@ -35,28 +37,35 @@ body{
     top: 10%;
     right: 10%;
     width: 80%;
-    font-size: 25px;
-    background-color: #cccccc;
+    font-size: clamp(2rem,3vw,7rem);
+    /*font-size: 25px;*/
     color: gray;
+    background-color: #cccccc;
+    white-space: initial;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 
 }
 
 
 #imagen{
     width: 100%;
-    height: 80%;
+    /*height: 80%;*/
     margin: 1em auto;
     border: none;
 }
 #txt-palabra{
-    width: 100%;
+    width: 80%;
+    padding: 5%;
     height: clamp(1rem,320px,700px);
     border: none;
-    font-size: clamp(2rem,4vw,7rem);
+    font-size: clamp(2rem,3vw,7rem);
     color: #0a3871;
     text-align: center;
-    white-space: pre-wrap;
+    white-space: initial;
     text-transform: lowercase;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 #txt-palabra:focus{
@@ -71,7 +80,7 @@ body{
  color: white;   
 font-size: 20px;
 margin: 0.5em auto;
-transition: 1s all;
+transition: 0.5s all;
 }
 #btn-desencriptar{
     width: 90%;
@@ -129,39 +138,51 @@ transition: 1s all;
     width: 45%;
    
 }
+/*para que la info de advertencia se vea en una linea cada una*/
+.p1,.p2 {
+    width: 100%;
+ }
 
  }
 
 
-
-
-
- /*portátiles    */
+ /*portátiles   hacia arriba */
 @media (min-device-width: 993px){
+/*para que la info de advertencia se vea en una linea cada una*/
 
-    header{
-        position: absolute;
-    }
-
+    .p1,.p2  {
+        width: 100%;
+     }
+   
+    
     main{
-      height: 600px;
+        box-sizing: border-box;
+        display: flex;
     }
-.input-boton{
-    display: inline-block;
-    width: 60%;
-    height:100%;
-    height: 1200px;
-}
+    .input-boton{
+        width: 60%;
+        height: 600px;
+        
+       
+    }
 
-.imagen-copiar{
-    display: inline-block;
-    width: 30%;
-    height: 100%;
-    height: 1200px;
-}
+    .imagen-copiar{
+        width: 30%;
+      
+    }
+    /*#imagen {
+        margin: 1em auto;
+        border: none;
+    }*/
+    #txt-palabra{
+        height: clamp(2rem,520px,700px);
+        border: none; 
+    }
 
-.imagen{
-    vertical-align: text-top;
-}
+    .imagen-copiar{
+        height: clamp(2rem,600px,700px);
+       
+    }
+
 
 }

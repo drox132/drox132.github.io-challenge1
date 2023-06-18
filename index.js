@@ -81,6 +81,8 @@ const btnEncriptar = document.getElementById("btn-encriptar");
             let u = "ufat";
             const copiar = document.getElementById("btn-copiar");
             const imagen = document.getElementById("imagen");
+            const p1  = document.querySelector(".p1");
+            const p2 = document.querySelector(".p2");
             const spanInput = document.getElementById("valor-encriptado");
             const txtPalabra = document.getElementById("txt-palabra").value;
             
@@ -110,6 +112,8 @@ const btnEncriptar = document.getElementById("btn-encriptar");
          
             imagen.style.display ="none";
             copiar.style.display ="inline";
+            p1.style.display ="none";
+            p2.style.display="none";
             spanInput.innerText = palabraEncriptada;
            
             limpiarInput();
